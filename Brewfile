@@ -62,25 +62,12 @@ cask 'vlc'
 cask 'bettertouchtool'
 cask 'adobe-creative-cloud'
 
-# Quicklook
-# cask 'qlcolorcode'
-# cask 'qlmarkdown'
-# cask 'quicklook-json'
-# cask 'quicklook-csv'
-# cask 'qlstephen'
-
 # Fonts
 cask 'font-sauce-code-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
+cask 'font-fira-code'
 
 # Install Mac App Store apps
-# mas '1Password', id: 443987910
-# mas 'Byword', id: 420212497
-# mas 'Deckset', id: 847496013
 # mas 'Giphy Capture', id: 668208984
-# mas 'Paw', id: 584653203
-# mas 'Sip', id: 507257563
-# mas 'Sketch', id: 402476602
-# mas 'Tweetbot', id: 557168941

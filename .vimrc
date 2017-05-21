@@ -29,13 +29,22 @@ set incsearch
 "/
 "/ CtrP
 "/
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'		"Ignore in search
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'	"Order search results
+
+"Ignore in search
+let g:trlp_custom_ignore = 'node_modules\DS_Store\|git'
+"Order search results
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 "/
 "/ NERDTreee
 "/
 let NERDTreeHijackNertrw = 0
+
+"/
+"/ Markdown
+"/
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
 
 "----------------Split Management-----------------"
 set splitbelow
