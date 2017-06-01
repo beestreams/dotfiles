@@ -1,10 +1,10 @@
 set nocompatible
 
-so ~/.vim/plugins.vim
+so $HOME/dotfiles/.vim/plugins.vim
 
 syntax enable
 set backspace=indent,eol,start			"Make backspace behave like it should
-let mapleader = ','				"The default leader is backslash but a comma is better
+let mapleader=','				"The default leader is backslash but a comma is better
 
 "----------------Visuals-----------------"
 colorscheme atom-dark
@@ -19,6 +19,11 @@ set guioptions-=l			"Remove scrollbar on lefthandside
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+set tabstop=4
+set ignorecase				"Ignore case if searcing
+set smartcase				"Ignore case if all lowercase
+set autoindent
+set copyindent
 
 "----------------Searching-----------------"
 set hlsearch
@@ -29,6 +34,9 @@ set incsearch
 "/
 "/ CtrP
 "/
+nmap <D-r> :CtrlPBufTag<cr>
+nmap <D-e> :CtrlPMRUFiles<cr>
+nmap <D-p> :CtrlP<cr>
 
 "Ignore in search
 let g:trlp_custom_ignore = 'node_modules\DS_Store\|git'
@@ -62,10 +70,8 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader><space> :nohlsearch<cr>
 "Make NERDTree easier to toggle
 nmap <D-1> :NERDTreeToggle<cr>
-nmap <c-r> :CtrlPBufTag<cr>
-nmap <D-e> :CtrlPMRUFiles<cr>
-nmap <D-p> :CtrlP<cr>
-
+"Search tags
+nmap <Leader>f :tags<space>
 
 "----------------Autocommand-----------------"
 "Automatically soruce the Vimrc file on save.
