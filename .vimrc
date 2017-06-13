@@ -20,7 +20,7 @@ set guioptions-=l			"Remove scrollbar on lefthandside
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-set tabstop=4
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab smarttab
 set ignorecase				"Ignore case if searcing
 set smartcase				"Ignore case if all lowercase
 set autoindent
@@ -97,6 +97,7 @@ nmap <C-L> <C-W><C-L>
 "----------------Mappings-----------------"
 "Make it easy to edit vimrc file"
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
+"Make it easy to add snippets
 nmap <Leader>es :e ~/.vim/snippets/
 nmap <Leader>rs :call ReloadAllSnippets()<cr>
 "Clear highlight in search
@@ -107,6 +108,8 @@ nmap <D-1> :NERDTreeToggle<cr>
 nmap <Leader>f :tags<space>
 " Fast saves
 nmap <leader>w :w!<cr>
+"Fast close buffer
+nmap <leader>c :bd<cr>
 
 "Sort PHP use statements
 "http://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
@@ -115,11 +118,11 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 
 "----------------Laravel specific-----------------"
 nmap <Leader>lm :!php artisan make:
-nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
-nmap <Leader><Leader>m :CtrlP<cr>app/
-nmap <Leader><Leader>v :CtrlP<cr>resources/views/
-nmap <Leader><Leader>t :CtrlP<cr>tests/
-nmap <Leader><Leader>js :CtrlP<cr>resources/js
+nmap <Leader><Leader>c :CtrlP app/Http/Controllers/<cr>
+nmap <Leader><Leader>m :CtrlP app/<cr>
+nmap <Leader><Leader>v :CtrlP resources/views/<cr>
+nmap <Leader><Leader>t :CtrlP tests/<cr>
+nmap <Leader><Leader>js :CtrlP resources/js<cr>
 
 
 
