@@ -21,6 +21,7 @@ tap 'homebrew/php'
 # Install Binaries
 brew 'awscli'
 brew 'git'
+brew 'ctags'
 brew 'hub'
 brew 'tree'
 brew 'mackup'

@@ -15,7 +15,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-
+Plugin 'rking/ag.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'jwalton512/vim-blade'
+Plugin 'posva/vim-vue'
+Plugin 'msanders/snipmate.vim'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

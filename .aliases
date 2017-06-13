@@ -1,0 +1,34 @@
+alias ls="ls -a"
+
+alias h="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias pa="php artisan"
+alias boom="php artisan migrate:refresh --seed"
+
+alias glp="gulp"
+alias glpw="gulp watch"
+
+alias yr="yarn run"
+alias nr="npm run"
+
+
+alias se="sublime"
+
+alias edithosts="se /etc/hosts"
+alias addalias="cd ~ && sublime .aliases && cd -"
+
+alias editbash="cd ~ && sublime .bash_profile && cd -"
+alias reloadbash="cd ~ && . .bash_profile && cd -"
+
+alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
+
+alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+alias makectags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i"'
+
+alias phpunit="vendor/bin/phpunit"
+alias behat="vendor/bin/behat"
+alias tf="vendor/bin/phpunit --filter"
+alias duskf="php artisan dusk --filter="
