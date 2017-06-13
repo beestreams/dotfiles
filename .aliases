@@ -1,8 +1,16 @@
-alias ls="ls -a"
+# File listings
+alias l="ls -la"       # List in long format, include dotfiles
+alias ld="ls -ld */"   # List in long format, only directories
 
+# Directory traversal
 alias h="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
+
+# Create directory and enter it
+function cdir() {
+	mkdir $1 && cd $1
+}
 
 alias pa="php artisan"
 alias boom="php artisan migrate:refresh --seed"
@@ -13,14 +21,17 @@ alias glpw="gulp watch"
 alias yr="yarn run"
 alias nr="npm run"
 
+alias rebuildsass="npm rebuild node-sass"
 
 alias se="sublime"
 
 alias edithosts="se /etc/hosts"
-alias addalias="cd ~ && sublime .aliases && cd -"
 
 alias editbash="cd ~ && sublime .bash_profile && cd -"
+alias addalias="cd ~ && sublime .aliases && cd -"
 alias reloadbash="cd ~ && . .bash_profile && cd -"
+
+alias killDS='find . -name *.DS_Store -type f -delete'
 
 alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
 
@@ -31,4 +42,4 @@ alias makectags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^
 alias phpunit="vendor/bin/phpunit"
 alias behat="vendor/bin/behat"
 alias tf="vendor/bin/phpunit --filter"
-alias duskf="php artisan dusk --filter="
+alias duskf="php artisan dusk --filter"
