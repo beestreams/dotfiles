@@ -1,3 +1,10 @@
+snippet <?
+	<?php
+
+	${0:${VISUAL}}
+
+
+# Method creation
 snippet met
 	public function ${1}()
 	{
@@ -32,6 +39,7 @@ snippet tmet
 snippet $
 	$this->${1}
 
+# Returns
 snippet ret$
 	return $this${1};${2}
 
@@ -45,8 +53,64 @@ snippet ret1
 	return true;
 
 
+# Laravel specific
 snippet routeget
 	Route::get('${1}', ['as' => '${2}', 'uses' => '${3}Controller@${4}']);
 
 snippet routepost
 	Route::post('${1}', ['as' => '${2}', 'uses' => '${3}Controller@${4}']);
+
+
+# Conditionals
+snippet =?:
+	$${1:foo} = ${2:true} ? ${3:a} : ${0};
+
+snippet if
+	if (${1}) {
+		${2}
+	}
+
+snippet else 
+	else {
+		${1}
+	}
+snippet switch "switch($var) { case 'xyz': ... default: .... }"
+	switch ($${1:variable}) {
+		case '${2:value}':
+			${3}
+			break;
+		${0}
+		default:
+			${4}
+			break;
+	}
+
+snippet case "case 'value': ... break"
+	case '${1:value}':
+		${0:${VISUAL}}
+		break
+	snippet vd
+	var_dump(${0});
+
+# Loops 
+snippet foreachk "foreach ($var as $key => $value) { .. }"
+	foreach ($${1:variable} as $${2:key} => $${3:value}) {
+		${0:${VISUAL}}
+	}
+
+snippet foreach
+	foreach ($${1:vars} as $${2:$var}) {
+		${0:${VISUAL}}
+	}
+
+# debugging
+snippet vdd
+	var_dump(${1}); die(${0:});
+
+snippet ec
+	echo ${0};
+
+snippet d
+	dd(${0});
+snippet pd
+	echo '<pre>'; var_dump(${0}); echo '</pre>';
