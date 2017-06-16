@@ -1,0 +1,2 @@
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
