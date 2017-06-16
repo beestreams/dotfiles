@@ -1,0 +1,28 @@
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+[submodule ".vim/bundle/php.vim"]
+	path = .vim/bundle/php.vim
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+[submodule ".vim/bundle/vim-blade"]
+	path = .vim/bundle/vim-blade
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+[submodule ".vim/bundle/vim-php-cs-fixer"]
+	path = .vim/bundle/vim-php-cs-fixer
+[submodule ".vim/bundle/vim-php-namespace"]
+	path = .vim/bundle/vim-php-namespace
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+[submodule ".vim/bundle/vim-vinegar"]
+	path = .vim/bundle/vim-vinegar
+[submodule ".vim/bundle/vim-vue"]
+	path = .vim/bundle/vim-vue
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
