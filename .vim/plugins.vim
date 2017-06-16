@@ -20,9 +20,12 @@ Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'jwalton512/vim-blade'
 Plugin 'posva/vim-vue'
-Plugin 'msanders/snipmate.vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'ervandew/supertab'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
