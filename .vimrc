@@ -20,7 +20,14 @@ set guioptions-=l			"Remove scrollbar on lefthandside
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab smarttab
+
+" Tabs and spacing
+set tabstop=4 
+set shiftwidth=4 
+set softtabstop=4
+set expandtab
+set smarttab
+
 set ignorecase				"Ignore case if searcing
 set smartcase				"Ignore case if all lowercase
 set autoindent
