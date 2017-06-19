@@ -1,6 +1,29 @@
+# Component bits
+snippet props 
+	props: {
+		${1:propName}: {${2}}
+	},
 snippet computed
 	computed: {
-		${1:function} () {
+		${1:propertyName} () {
 			${2}
-		}
+			return ;
+		} 
 	},
+snippet component
+	<template>
+		${1:<div></div>}
+	</template>
+	<script>
+		export default {
+			data() {
+				return {
+					${2:name}:${3:value}
+				}
+			},
+			props: {},
+			methods: {},
+			computed: {},
+		}
+	</script>
+	<style></style>
