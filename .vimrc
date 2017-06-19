@@ -119,7 +119,13 @@ nmap <Leader>f :tags<space>
 " Fast saves
 nmap <leader>w :w!<cr>
 "Fast close buffer
-nmap <leader>c :bd<cr>
+nmap <leader>x :bd<cr>
+
+
+"----------------Macros-----------------"
+nmap <leader>c _i// 
+nmap <leader>cc _vf d
+
 
 "Sort PHP use statements
 "http://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
