@@ -140,7 +140,7 @@ nmap <Leader><Leader>c :CtrlP app/Http/Controllers/<cr>
 nmap <Leader><Leader>m :CtrlP app/<cr>
 nmap <Leader><Leader>v :CtrlP resources/views/<cr>
 nmap <Leader><Leader>t :CtrlP tests/<cr>
-nmap <Leader><Leader>js :CtrlP resources/js<cr>
+nmap <Leader><Leader>js :CtrlP resources/assets/js<cr>
 
 
 
