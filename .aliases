@@ -37,7 +37,7 @@ alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
 
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 
-alias makectags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i"'
+alias maketags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i"'
 
 alias phpunit="vendor/bin/phpunit"
 alias behat="vendor/bin/behat"
