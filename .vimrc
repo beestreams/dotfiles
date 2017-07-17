@@ -41,6 +41,14 @@ set hlsearch
 set incsearch
 
 
+"----------------Commenting-----------------"
+nmap <leader>c :call CommentLine()<cr>
+nmap <leader>cc :call UnCommentLine()<cr>
+
+vnoremap <leader>cb :call RangeCommentLine()<cr>
+vnoremap <leader>ccb :call RangeUnCommentLine()<cr>
+
+
 "----------------Plugin-----------------"
 "/
 "/ CtrP
@@ -49,7 +57,7 @@ nmap <D-r> :CtrlPBufTag<cr>
 nmap <D-e> :CtrlPMRUFiles<cr>
 nmap <D-p> :CtrlP<cr>
 " I don't want to pull up these folders/files when calling CtrlP
-set wildignore+=*/vendor/**
+set wildignore+=*/public/**
 
 
 "Ignore in search
@@ -121,10 +129,11 @@ nmap <leader>w :w!<cr>
 "Fast close buffer
 nmap <leader>x :bd<cr>
 
+"Testing
+nmap <Leader>t :!php artisan dusk<cr>
+nmap <Leader>tf :!php artisan dusk filter %<cr>
 
 "----------------Macros-----------------"
-nmap <leader>c _i// 
-nmap <leader>cc _vf d
 
 
 "Sort PHP use statements
@@ -141,8 +150,10 @@ nmap <Leader><Leader>m :CtrlP app/<cr>
 nmap <Leader><Leader>v :CtrlP resources/views/<cr>
 nmap <Leader><Leader>t :CtrlP tests/<cr>
 nmap <Leader><Leader>js :CtrlP resources/assets/js<cr>
+nmap <Leader><Leader><leader>c :CtrlP resources/assets/sass<cr>
 
 
+nmap <Leader><Leader>vd :CtrlP vendor/<cr>
 
 "----------------Autocommand-----------------"
 "Automatically soruce the Vimrc file on save.
@@ -154,3 +165,18 @@ augroup END
 
 
 
+"----------------Functions-----------------"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE (thanks Gary Bernhardt)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>rn :call RenameFile()<cr>
