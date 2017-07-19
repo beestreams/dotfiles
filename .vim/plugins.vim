@@ -26,6 +26,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
+Plugin 'sudar/comments.vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

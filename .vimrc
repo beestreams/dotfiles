@@ -20,7 +20,14 @@ set guioptions-=l			"Remove scrollbar on lefthandside
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab smarttab
+
+" Tabs and spacing
+set tabstop=4 
+set shiftwidth=4 
+set softtabstop=4
+set expandtab
+set smarttab
+
 set ignorecase				"Ignore case if searcing
 set smartcase				"Ignore case if all lowercase
 set autoindent
@@ -34,6 +41,14 @@ set hlsearch
 set incsearch
 
 
+"----------------Commenting-----------------"
+nmap <leader>c :call CommentLine()<cr>
+nmap <leader>cc :call UnCommentLine()<cr>
+
+vnoremap <leader>cb :call RangeCommentLine()<cr>
+vnoremap <leader>ccb :call RangeUnCommentLine()<cr>
+
+
 "----------------Plugin-----------------"
 "/
 "/ CtrP
@@ -42,7 +57,7 @@ nmap <D-r> :CtrlPBufTag<cr>
 nmap <D-e> :CtrlPMRUFiles<cr>
 nmap <D-p> :CtrlP<cr>
 " I don't want to pull up these folders/files when calling CtrlP
-set wildignore+=*/vendor/**
+set wildignore+=*/public/**
 
 
 "Ignore in search
@@ -112,7 +127,14 @@ nmap <Leader>f :tags<space>
 " Fast saves
 nmap <leader>w :w!<cr>
 "Fast close buffer
-nmap <leader>c :bd<cr>
+nmap <leader>x :bd<cr>
+
+"Testing
+nmap <Leader>t :!php artisan dusk<cr>
+nmap <Leader>tf :!php artisan dusk filter %<cr>
+
+"----------------Macros-----------------"
+
 
 "Sort PHP use statements
 "http://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
@@ -127,9 +149,11 @@ nmap <Leader><Leader>c :CtrlP app/Http/Controllers/<cr>
 nmap <Leader><Leader>m :CtrlP app/<cr>
 nmap <Leader><Leader>v :CtrlP resources/views/<cr>
 nmap <Leader><Leader>t :CtrlP tests/<cr>
-nmap <Leader><Leader>js :CtrlP resources/js<cr>
+nmap <Leader><Leader>js :CtrlP resources/assets/js<cr>
+nmap <Leader><Leader><leader>c :CtrlP resources/assets/sass<cr>
 
 
+nmap <Leader><Leader>vd :CtrlP vendor/<cr>
 
 "----------------Autocommand-----------------"
 "Automatically soruce the Vimrc file on save.
@@ -141,3 +165,18 @@ augroup END
 
 
 
+"----------------Functions-----------------"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE (thanks Gary Bernhardt)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>rn :call RenameFile()<cr>
