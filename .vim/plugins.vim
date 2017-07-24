@@ -21,6 +21,7 @@ Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'jwalton512/vim-blade'
 Plugin 'posva/vim-vue'
 Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'StanAngeloff/php.vim'
@@ -28,6 +29,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
 Plugin 'sudar/comments.vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tobyS/pdv'
+Plugin 'tobyS/vmustache'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

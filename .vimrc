@@ -103,6 +103,24 @@ let g:php_cs_fixer_rules = "@PSR2"
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 
+
+"/
+"/ PDV
+"/
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+
+"/
+"/ UltiSnips
+"/
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+
 "----------------Split Management-----------------"
 set splitbelow
 set splitright
@@ -129,9 +147,13 @@ nmap <leader>w :w!<cr>
 "Fast close buffer
 nmap <leader>x :bd<cr>
 
-"Testing
+"Testing - dusk
 nmap <Leader>t :!php artisan dusk<cr>
 nmap <Leader>tf :!php artisan dusk filter %<cr>
+
+"Testing - phpunit
+nmap <Leader>put :!phpunit<cr>
+nmap <Leader>punitf :!phpunit --filter=%<cr>
 
 "----------------Macros-----------------"
 
