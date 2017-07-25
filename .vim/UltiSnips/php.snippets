@@ -1,0 +1,143 @@
+snippet <?
+<?php
+
+${0:${VISUAL}}
+
+endsnippet
+
+# Method creation
+snippet met
+public function ${1:functionName}(${2:args})
+{
+	${3:return}
+}
+endsnippet
+
+snippet prmet
+private function ${1:functionName}(${2:args})
+{
+	${3:return }
+}
+endsnippet
+
+snippet pmet
+protected function ${1}()
+{
+	${2}
+}
+endsnippet
+
+snippet smet
+public static function ${1:callableFunction}($2)
+{
+	${3}
+
+}
+endsnippet
+
+snippet tmet
+/** @test */
+public function the_one_where_${1} ()
+{
+	${2}
+}
+endsnippet
+
+snippet $
+$this->${1}
+endsnippet
+
+# Returns
+snippet ret$
+return $this${1};${2}
+endsnippet
+
+snippet ret
+return ${1};${2}
+endsnippet
+
+snippet ret0
+return false;
+endsnippet
+
+snippet ret1
+return true;
+endsnippet
+
+
+# Laravel specific
+snippet routeget
+Route::get('${1}', ['as' => '${2}', 'uses' => '${3}Controller@${4}']);
+endsnippet
+
+snippet routepost
+Route::post('${1}', ['as' => '${2}', 'uses' => '${3}Controller@${4}']);
+endsnippet
+
+
+# Conditionals
+snippet =?:
+$${1:foo} = ${2:true} ? ${3:a} : ${0};
+endsnippet
+
+snippet if
+if (${1}) {
+	${2}
+}
+endsnippet
+
+snippet else 
+else {
+	${1}
+}
+endsnippet
+snippet switch "switch($var) { case 'xyz': ... default: .... }"
+switch ($${1:variable}) {
+	case '${2:value}':
+		${3}
+		break;
+	${0}
+	default:
+		${4}
+		break;
+}
+endsnippet
+
+snippet case "case 'value': ... break"
+case '${1:value}':
+	${0:${VISUAL}}
+	break
+snippet vd
+var_dump(${0});
+endsnippet
+
+# Loops 
+snippet foreachk "foreach ($var as $key => $value) { .. }"
+foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet foreach
+foreach ($${1:vars} as $${2:$var}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# debugging
+snippet vdd
+var_dump(${1}); die(${0:});
+endsnippet
+
+snippet ec
+echo ${0};
+endsnippet
+
+snippet d
+dd(${0});
+endsnippet
+
+snippet pd
+echo '<pre>'; var_dump(${0}); echo '</pre>';
+endsnippet
+
