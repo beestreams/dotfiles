@@ -151,7 +151,7 @@ nmap <Leader><Leader>v :CtrlP resources/views/<cr>
 nmap <Leader><Leader>t :CtrlP tests/<cr>
 nmap <Leader><Leader>js :CtrlP resources/assets/js<cr>
 nmap <Leader><Leader><leader>c :CtrlP resources/assets/sass<cr>
-
+nmap <leader><leader>llog :e storage/logs/laravel.log<cr>
 
 nmap <Leader><Leader>vd :CtrlP vendor/<cr>
 
