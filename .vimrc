@@ -152,8 +152,8 @@ nmap <Leader>t :!php artisan dusk<cr>
 nmap <Leader>tf :!php artisan dusk filter %<cr>
 
 "Testing - phpunit
-nmap <Leader>put :!phpunit<cr>
-nmap <Leader>punitf :!phpunit --filter=%<cr>
+nmap <Leader>put :!vendor/bin/phpunit<cr>
+nmap <Leader>putf :!vendor/bin/phpunit --filter=%<cr>
 
 "----------------Macros-----------------"
 
@@ -173,7 +173,9 @@ nmap <Leader><Leader>v :CtrlP resources/views/<cr>
 nmap <Leader><Leader>t :CtrlP tests/<cr>
 nmap <Leader><Leader>js :CtrlP resources/assets/js<cr>
 nmap <Leader><Leader><leader>c :CtrlP resources/assets/sass<cr>
+nmap <Leader>styl :CtrlP resources/assets/styl<cr>
 nmap <leader><leader>llog :e storage/logs/laravel.log<cr>
+nmap <leader><leader>lrw :e routes/web.php<cr>
 
 nmap <Leader><Leader>vd :CtrlP vendor/<cr>
 

@@ -31,6 +31,8 @@ Plugin 'sudar/comments.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tobyS/pdv'
 Plugin 'tobyS/vmustache'
+Plugin 'mattn/emmet-vim'
+Plugin 'wavded/vim-stylus'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

@@ -9,7 +9,7 @@ endsnippet
 snippet met
 public function ${1:functionName}(${2:args})
 {
-	${3:return}
+	return ${3:$this};
 }
 endsnippet
 
@@ -141,3 +141,20 @@ snippet pd
 echo '<pre>'; var_dump(${0}); echo '</pre>';
 endsnippet
 
+
+
+### Laravel specific
+snippet route
+Route::${1:get}('${2:/url}', '${3:Something}Controller@${4:index}')->name('$5');
+endsnippet
+
+
+### Testing
+snippet browse
+$this->browse(function (Browser $browser) {
+	$user = factory('App\User')->create();
+	$browser->loginAs($user)
+		->visit('/lunches/create')
+		->assertSee('Buns');
+});
+endsnippet
