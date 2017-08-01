@@ -9,29 +9,29 @@ endsnippet
 snippet met
 public function ${1:functionName}(${2:args})
 {
-	${3:return}
+	return ${3:$this};
 }
 endsnippet
 
 snippet prmet
 private function ${1:functionName}(${2:args})
 {
-	${3:return }
+	return ${3:$this};
 }
 endsnippet
 
 snippet pmet
 protected function ${1}()
 {
-	${2}
+	return ${3:$this};
 }
 endsnippet
 
 snippet smet
 public static function ${1:callableFunction}($2)
 {
-	${3}
-
+	new static;
+	return ${3:$this};
 }
 endsnippet
 
