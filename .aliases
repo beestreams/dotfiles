@@ -8,39 +8,61 @@ alias h="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
 
+
+
+
+# Laravel specific
+alias pa="php artisan"
+alias boom="php artisan migrate:refresh --seed"
+
+# Homestead
+alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
+alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+# Testing
+alias phpunit="vendor/bin/phpunit"
+alias behat="vendor/bin/behat"
+alias tf="vendor/bin/phpunit --filter"
+alias duskf="php artisan dusk --filter"
+
+# Gulp
+alias glp="gulp"
+alias glpw="gulp watch"
+
+# Yarn
+alias yr="yarn run"
+alias nr="npm run"
+
+### Docker ###
+alias dcc="docker container"
+
+
+# Node
+alias rebuildsass="npm rebuild node-sass"
+
+# Sublime
+alias se="sublime"
+
+# Networking
+alias edithosts="se /etc/hosts"
+
+# Mod dot
+alias editbash="cd ~ && sublime .bash_profile && cd -"
+alias addalias="cd ~ && sublime .aliases && cd -"
+alias reloadbash="cd ~ && . .bash_profile && cd -"
+
+### File system ###
+
+# Remove .DS_store files
+alias killDS='find . -name *.DS_Store -type f -delete'
+
 # Create directory and enter it
 function cdir() {
 	mkdir $1 && cd $1
 }
 
-alias pa="php artisan"
-alias boom="php artisan migrate:refresh --seed"
 
-alias glp="gulp"
-alias glpw="gulp watch"
 
-alias yr="yarn run"
-alias nr="npm run"
-
-alias rebuildsass="npm rebuild node-sass"
-
-alias se="sublime"
-
-alias edithosts="se /etc/hosts"
-
-alias editbash="cd ~ && sublime .bash_profile && cd -"
-alias addalias="cd ~ && sublime .aliases && cd -"
-alias reloadbash="cd ~ && . .bash_profile && cd -"
-
-alias killDS='find . -name *.DS_Store -type f -delete'
-
-alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
-
-alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
-
+### ###
 alias maketags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i"'
 
-alias phpunit="vendor/bin/phpunit"
-alias behat="vendor/bin/behat"
-alias tf="vendor/bin/phpunit --filter"
-alias duskf="php artisan dusk --filter"
