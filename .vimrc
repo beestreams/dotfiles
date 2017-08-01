@@ -1,4 +1,3 @@
-set nocompatible
 
 so $HOME/dotfiles/.vim/plugins.vim
 
@@ -9,7 +8,9 @@ let mapleader=','				"The default leader is backslash but a comma is better
 "----------------Visuals-----------------"
 colorscheme atom-dark
 
+
 set number 					"Let's activate line number
+let g:ctrlp_show_hidden = 1 "Shows hidden files
 set noerrorbells visualbell t_vb= "No error bells
 set linespace=17				"Line space in macvim
 set macligatures				"Pretty symbols
