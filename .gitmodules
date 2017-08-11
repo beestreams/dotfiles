@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
-[submodule ".vim/bundle/comments.vim"]
-	path = .vim/bundle/comments.vim
-	url = https://github.com/sudar/comments.vim
 [submodule ".vim/bundle/vmustache"]
 	path = .vim/bundle/vmustache
 	url = https://github.com/tobyS/vmustache.git
