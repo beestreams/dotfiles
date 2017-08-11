@@ -44,5 +44,4 @@ rvm use 2.4.1
 # Create a Sites directory
 mkdir $HOME/Sites
 
-# Set macOS preferences
-source .macos
+

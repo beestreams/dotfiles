@@ -8,4 +8,10 @@ function reconfigureSymlinks {
 	ln -sf $HOME/dotfiles/.vim $HOME/.vim
 	ln -sf $HOME/dotfiles/.aliases $HOME/.aliases
     ln -sf $HOME/dotfiles/.gvimrc $HOME/.gvimrc	
+    ln -sf $HOME/dotfiles/.macos $HOME/.macos
+    ln -sf $HOME/dotfiles/.bash_profile $HOME/.bash_profile
+}
+
+function reloadConfig {
+	. ~/.bash_profile
 }
