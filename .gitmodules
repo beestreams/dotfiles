@@ -55,8 +55,6 @@
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule ".vim/bundle/php.vim"]
-	path = .vim/bundle/php.vim
 [submodule ".vim/bundle/pdv"]
 	path = .vim/bundle/pdv
 	url = https://github.com/tobyS/pdv.git
