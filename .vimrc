@@ -1,4 +1,5 @@
-
+set nocompatible
+filetype off 
 so $HOME/dotfiles/.vim/plugins.vim
 
 syntax enable

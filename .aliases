@@ -9,9 +9,18 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 
+function makedb() {
+	mysql -uroot -e "CREATE DATABASE $1"
+}
 
+function opv() {
+	cd ~/Sites/"$1" && mvim
+}
 
-# Laravel specific
+function ops() {
+	cd ~/Sites/"$1" && subl .
+}
+
 alias pa="php artisan"
 alias boom="php artisan migrate:refresh --seed"
 
