@@ -42,6 +42,7 @@ brew 'mariadb'
 # Apps
 cask 'aerial'
 cask 'bettertouchtool'
+cask 'docker'
 cask 'dropbox'
 cask 'firefox'
 cask 'google-chrome'
