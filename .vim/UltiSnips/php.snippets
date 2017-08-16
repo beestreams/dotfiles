@@ -1,8 +1,16 @@
-snippet <?
+snippet php
 <?php
 
 ${0:${VISUAL}}
 
+endsnippet
+
+# Class creation
+snippet class
+class $1 ${2:extends ${3:model}}
+{
+	$0
+}
 endsnippet
 
 # Method creation
