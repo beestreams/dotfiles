@@ -24,6 +24,9 @@ function ops() {
 alias pa="php artisan"
 alias boom="php artisan migrate:refresh --seed"
 
+# Composer
+alias cda="composer dumpautoload"
+
 # Homestead
 alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
@@ -50,7 +53,8 @@ alias dcc="docker container"
 alias rebuildsass="npm rebuild node-sass"
 
 # Sublime
-alias se="sublime"
+alias se="subl"
+alias sublime="subl"
 
 # Networking
 alias edithosts="se /etc/hosts"
