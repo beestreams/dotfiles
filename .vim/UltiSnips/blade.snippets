@@ -23,7 +23,6 @@ endsnippet
 
 
 
-# Forms
 snippet h1
 <h1>$1</h1>
 endsnippet
@@ -63,9 +62,12 @@ snippet ul
 endsnippet
 
 
+# Forms
 snippet form
 <form method="${1:POST}" action="$2" ${3:enctype="multipart/form-data"}>
-	$4
+	{{csrf_field()}}
+	${4:{{method_field(${5:'PUT'})}}}
+	$0
 </form>
 endsnippet
 
@@ -98,3 +100,14 @@ snippet btn
 <button class="${1:btn}">$2</button>
 endsnippet
 
+snippet img
+<img
+	class="$1"
+	src="$2"
+	alt="$3"
+	title="$4" />
+endsnippet
+
+snippet ee
+{{$1}}
+endsnippet
