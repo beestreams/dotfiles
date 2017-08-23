@@ -47,6 +47,7 @@ alias nr="npm run"
 
 ### Docker ###
 alias dcc="docker container"
+alias dockerstop="docker kill $(docker ps -q)"
 
 
 # Node
