@@ -13,6 +13,10 @@ function makedb() {
 	mysql -uroot -e "CREATE DATABASE $1"
 }
 
+function rmdb() {
+    mysql -uroot -e "DROP DATABASE IF EXISTS $1"
+}
+
 function opv() {
 	cd ~/Sites/"$1" && mvim
 }
@@ -36,6 +40,9 @@ alias phpunit="vendor/bin/phpunit"
 alias behat="vendor/bin/behat"
 alias tf="vendor/bin/phpunit --filter"
 alias duskf="php artisan dusk --filter"
+
+# Git
+alias gc="git checkout"
 
 # Gulp
 alias glp="gulp"
