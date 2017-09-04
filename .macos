@@ -34,3 +34,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Speed up Mission Control animations
+defaults write com.apple.dock expose-animation-duration -float 0.1
