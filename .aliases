@@ -61,8 +61,8 @@ alias dockerstop="docker kill $(docker ps -q)"
 alias rebuildsass="npm rebuild node-sass"
 
 # Sublime
-alias se="subl"
-alias sublime="subl"
+# alias se="subl"
+# alias sublime="subl"
 
 # Networking
 alias edithosts="se /etc/hosts"
