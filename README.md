@@ -13,4 +13,4 @@ These dotfiles are based on (https://github.com/webpro/dotfiles/blob/master/maco
 This repo has big flaws.
 Vundle should be a submodule
 DIR should not be dependant on being $HOME/dotfiles
-
+Add redis start (redis)[https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298]
