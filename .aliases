@@ -1,6 +1,11 @@
 # Terminal handling
 alias c="clear"
 
+# Terminal stuff
+alias plz='sudo $(history -p !!)'
+alias please='sudo $(history -p !!)'
+
+
 # File listings
 alias l="ls -la"       # List in long format, include dotfiles
 alias ld="ls -ld */"   # List in long format, only directories
@@ -17,6 +22,10 @@ alias ...="cd ../.."
 
 function makedb() {
 	mysql -uroot -e "CREATE DATABASE $1"
+}
+
+function rmdb() {
+    mysql -uroot -e "DROP DATABASE IF EXISTS $1"
 }
 
 function opv() {
@@ -43,6 +52,9 @@ alias behat="vendor/bin/behat"
 alias tf="vendor/bin/phpunit --filter"
 alias duskf="php artisan dusk --filter"
 
+# Git
+alias gc="git checkout"
+
 # Gulp
 alias glp="gulp"
 alias glpw="gulp watch"
@@ -60,8 +72,8 @@ alias dockerstop="docker kill $(docker ps -q)"
 alias rebuildsass="npm rebuild node-sass"
 
 # Sublime
-alias se="subl"
-alias sublime="subl"
+# alias se="subl"
+# alias sublime="subl"
 
 # Networking
 alias edithosts="sudo mvim /etc/hosts"
