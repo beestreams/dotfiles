@@ -61,7 +61,7 @@ alias se="subl"
 alias sublime="subl"
 
 # Networking
-alias edithosts="se /etc/hosts"
+alias edithosts="sudo mvim /etc/hosts"
 
 # Mod dot
 alias editbash="cd ~ && sublime .bash_profile && cd -"
