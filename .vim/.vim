@@ -1,1 +1,0 @@
-/Users/mikaelbistrom/dotfiles/.vim
