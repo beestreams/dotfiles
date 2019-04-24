@@ -10,6 +10,9 @@ alias l="ls -la"       # List in long format, include dotfiles
 alias ld="ls -ld */"   # List in long format, only directories
 alias ls="ls -axG"
 
+# Finder
+alias o="open ."
+
 # Directory traversal
 alias h="cd ~"
 alias ..="cd .."
@@ -80,7 +83,7 @@ alias se="subl"
 # alias sublime="subl"
 
 # Networking
-alias edithosts="se /etc/hosts"
+alias edithosts="sudo mvim /etc/hosts"
 
 # Mod dot
 alias editbash="cd ~ && sublime .bash_profile && cd -"
