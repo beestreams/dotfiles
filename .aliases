@@ -5,7 +5,6 @@ alias c="clear"
 alias plz='sudo $(history -p !!)'
 alias please='sudo $(history -p !!)'
 
-
 # File listings
 alias l="ls -la"       # List in long format, include dotfiles
 alias ld="ls -ld */"   # List in long format, only directories
@@ -15,7 +14,7 @@ alias ls="ls -axG"
 alias h="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
-
+alias s="cd ~/Sites"
 
 function makedb() {
 	mysql -uroot -e "CREATE DATABASE $1"
@@ -32,6 +31,12 @@ function opv() {
 function ops() {
 	cd ~/Sites/"$1" && subl .
 }
+
+function opv() {
+	cd ~/Sites/"$1" && code .
+}
+
+alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
 
 alias pa="php artisan"
 alias boom="php artisan migrate:refresh --seed"
@@ -67,9 +72,11 @@ alias dockerstop="docker kill $(docker ps -q)"
 
 # Node
 alias rebuildsass="npm rebuild node-sass"
+alias removenodemodules="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+alias removelockfiles="find . -name 'package-lock.json' -prune -exec rm -rf '{}' +"
 
 # Sublime
-# alias se="subl"
+alias se="subl"
 # alias sublime="subl"
 
 # Networking
@@ -94,4 +101,3 @@ function cdir() {
 
 ### ###
 alias maketags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i"'
-
