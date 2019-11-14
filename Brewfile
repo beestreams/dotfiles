@@ -36,8 +36,8 @@ brew 'skype'
 brew 'ssh-copy-id'
 
 # Development
-brew 'php71', args: ['with-debug']
-brew 'php71-intl'
+brew 'php73', args: ['with-debug']
+brew 'php73-intl'
 brew 'mariadb'
 
 # Apps
@@ -51,17 +51,13 @@ cask 'google-chrome-canary'
 cask 'google-drive'
 cask 'macvim'
 cask 'imageoptim'
-cask 'sequel-pro'
 cask 'shuttle'
-cask 'skype'
 cask 'slack'
 cask 'spotify'
-cask 'sublime-text'
+cask 'tableplus'
 cask 'tower'
 cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
+cask 'visual-studio-code'
 cask 'vlc'
 
 cask 'adobe-creative-cloud'
