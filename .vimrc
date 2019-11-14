@@ -60,6 +60,7 @@ nmap <D-e> :CtrlPMRUFiles<cr>
 nmap <D-p> :CtrlP<cr>
 " I don't want to pull up these folders/files when calling CtrlP
 set wildignore+=*/public/**
+set wildignore+=*/node_modules/**
 
 
 "Ignore in search

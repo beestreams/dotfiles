@@ -32,6 +32,7 @@ brew 'node'
 brew 'nvm'
 brew 'trash'
 brew 'wget'
+brew 'skype'
 brew 'ssh-copy-id'
 
 # Development

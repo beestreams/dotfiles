@@ -1,16 +1,30 @@
+# Terminal handling
+alias c="clear"
+
+# Terminal stuff
+alias plz='sudo $(history -p !!)'
+alias please='sudo $(history -p !!)'
+
 # File listings
 alias l="ls -la"       # List in long format, include dotfiles
 alias ld="ls -ld */"   # List in long format, only directories
 alias ls="ls -axG"
 
+# Finder
+alias o="open ."
+
 # Directory traversal
 alias h="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
-
+alias s="cd ~/Sites"
 
 function makedb() {
 	mysql -uroot -e "CREATE DATABASE $1"
+}
+
+function rmdb() {
+    mysql -uroot -e "DROP DATABASE IF EXISTS $1"
 }
 
 function opv() {
@@ -20,6 +34,12 @@ function opv() {
 function ops() {
 	cd ~/Sites/"$1" && subl .
 }
+
+function opv() {
+	cd ~/Sites/"$1" && code .
+}
+
+alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
 
 alias pa="php artisan"
 alias boom="php artisan migrate:refresh --seed"
@@ -37,6 +57,9 @@ alias behat="vendor/bin/behat"
 alias tf="vendor/bin/phpunit --filter"
 alias duskf="php artisan dusk --filter"
 
+# Git
+alias gc="git checkout"
+
 # Gulp
 alias glp="gulp"
 alias glpw="gulp watch"
@@ -52,13 +75,15 @@ alias dockerstop="docker kill $(docker ps -q)"
 
 # Node
 alias rebuildsass="npm rebuild node-sass"
+alias removenodemodules="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+alias removelockfiles="find . -name 'package-lock.json' -prune -exec rm -rf '{}' +"
 
 # Sublime
 alias se="subl"
-alias sublime="subl"
+# alias sublime="subl"
 
 # Networking
-alias edithosts="se /etc/hosts"
+alias edithosts="sudo mvim /etc/hosts"
 
 # Mod dot
 alias editbash="cd ~ && sublime .bash_profile && cd -"
@@ -79,4 +104,3 @@ function cdir() {
 
 ### ###
 alias maketags='ctags -R --exclude=node_modules --PHP-kinds=cfi --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i"'
-
