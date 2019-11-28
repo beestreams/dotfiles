@@ -9,6 +9,7 @@ alias please='sudo $(history -p !!)'
 alias l="ls -la"       # List in long format, include dotfiles
 alias ld="ls -ld */"   # List in long format, only directories
 alias ls="ls -axG"
+alias trees="tree -I 'node_modules|cache|test_*'"
 
 # Finder
 alias o="open ."
@@ -19,6 +20,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias s="cd ~/Sites"
 
+
+# DATABASE
 function makedb() {
 	mysql -uroot -e "CREATE DATABASE $1"
 }
@@ -27,6 +30,7 @@ function rmdb() {
     mysql -uroot -e "DROP DATABASE IF EXISTS $1"
 }
 
+# Open in VIM
 function opv() {
 	cd ~/Sites/"$1" && mvim
 }
@@ -41,15 +45,15 @@ function opv() {
 
 alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
 
+# LARAVEL
 alias pa="php artisan"
 alias boom="php artisan migrate:refresh --seed"
 
 # Composer
 alias cda="composer dumpautoload"
 
-# Homestead
-alias hedit="cd ~/.homestead && sublime Homestead.yaml && cd -"
-alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+alias inst="composer install && yarn"
 
 # Testing
 alias phpunit="vendor/bin/phpunit"
@@ -67,6 +71,11 @@ alias glpw="gulp watch"
 # Yarn
 alias yr="yarn run"
 alias nr="npm run"
+
+# NPM
+function run() {
+	npm run $1
+}
 
 ### Docker ###
 alias dcc="docker container"
@@ -99,6 +108,7 @@ alias killDS='find . -name *.DS_Store -type f -delete'
 function cdir() {
 	mkdir $1 && cd $1
 }
+
 
 
 
