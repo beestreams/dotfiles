@@ -1,10 +1,10 @@
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'hombrew/cask'
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
+tap 'hombrew/cask-fonts'
 tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
+tap 'mongodb/brew'
 
 # Install GNU core utilities (those that come with macOS are outdated)
 # brew 'coreutils'
@@ -20,6 +20,7 @@ tap 'homebrew/php'
 
 # Install Binaries
 brew 'awscli'
+brew 'ansible'
 brew 'git'
 brew 'ctags'
 brew 'dnsmasq'
@@ -32,7 +33,6 @@ brew 'node'
 brew 'nvm'
 brew 'trash'
 brew 'wget'
-brew 'skype'
 brew 'ssh-copy-id'
 
 # Development
@@ -44,11 +44,12 @@ brew 'mariadb'
 cask 'aerial'
 cask 'bettertouchtool'
 cask 'docker'
+cask 'discord'
 cask 'dropbox'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-chrome-canary'
-cask 'google-drive'
+cask "google-backup-and-sync"
 cask 'macvim'
 cask 'imageoptim'
 cask 'shuttle'
@@ -58,9 +59,8 @@ cask 'tableplus'
 cask 'tower'
 cask 'transmit'
 cask 'visual-studio-code'
+cask 'unity-hub'
 cask 'vlc'
-
-cask 'adobe-creative-cloud'
 
 # Fonts
 cask 'font-source-code-pro'

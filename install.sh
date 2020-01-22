@@ -30,10 +30,6 @@ mv composer.phar /usr/local/bin/composer
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-# Install global NPM packages
-npm install --global yarn
-
-
 # gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
 rvm install 2.4.1
@@ -42,6 +38,4 @@ rvm use 2.4.1
 
 
 # Create a Sites directory
-mkdir $HOME/Sites
-
-
+mkdir $HOME/www
