@@ -58,3 +58,5 @@
 [submodule ".vim/bundle/pdv"]
 	path = .vim/bundle/pdv
 	url = https://github.com/tobyS/pdv.git
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
